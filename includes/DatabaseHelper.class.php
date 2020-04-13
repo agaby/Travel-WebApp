@@ -23,14 +23,14 @@ class DatabaseHelper {
         $results = null;
         if (count($parameters) >0 ) {
             // Use a prepared statement if parameters 
-            $statement = $pdo->prepare($sql); //...
-            $executedOk = $statement->execute($parameters); //...
+            $statement = $pdo->prepare($sql); 
+            $executedOk = $statement->execute($parameters); 
             if (! $executedOk) {
                 throw new PDOException;
             }
         } else {
             // Execute a normal query     
-            $statement = $pdo->execute($sql); //I think so... 
+            $statement = $pdo->execute($sql); 
             if (!$statement) {
                 throw new PDOException;
             }
